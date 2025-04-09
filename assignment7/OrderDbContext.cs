@@ -5,7 +5,7 @@ namespace OrderManagement_Win{
         public DbSet<Order> Orders {get; set;}
         public OrderDbContext() {}
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder){
-            string connectionString = "Server=localhost;Database=OrderManagement;User=root;Password=wyo269kxnsn@";
+            string connectionString = "Server=localhost;Database=OrderManagement;User=root;Password=YourPassword";//ENTER YOUR OWN PASSWORD
             optionsBuilder.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder){
